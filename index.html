@@ -39,19 +39,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about"><i class="fas fa-info mr-2 fa-lg"></i> About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#setup">Setup</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#setup"><i class="fas fa-download mr-2 fa-lg"></i> Setup</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#known_issues">Known Issues</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#known_issues"><i class="fas fa-question mr-2 fa-lg"></i> Known Issues & FAQ</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Team</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#team"><i class="fas fa-users mr-2 fa-lg"></i> Team</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://discord.gg/UFVY9DE" target="_blank">Join Discord</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://discord.gg/UFVY9DE" target="_blank"><i class="fab fa-discord mr-2 fa-lg"></i> Join Discord</a>
           </li>
         </ul>
       </div>
@@ -131,14 +131,64 @@
   <!-- About Section -->
   <section class="mb-0" id="known_issues">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary">Known Issues</h2>
+      <h2 class="text-center text-uppercase text-secondary">Known Issues & FAQ</h2>
       <hr class=" mb-5">
       <div class="row">
-        <div class="col-lg-4 ml-auto">
-          <!-- <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p> -->
+        <div class="col-lg-3 ml-auto">
+          <h4>Inverted Controls</h4>
+          Your Left/Right or Up/Down is inverted. Fix -- In bizhawk, click "Config -> Controls" and go to the third tab called "Analog Controls". If the L/R is inverted, make sure sensitivity on the top is -100 (Or if its already -100, to 100) , otherwise if the U/D is inverted, same instructions just for the bottom sensitivity option.
+          <br><br>
+          <h4>Low FPS</h4>
+          This is normal for bad computers. The best we can suggest is using Rice video plugin (Refer to Black Screen Glitch to change) as well as keep the internal resolution listed at the bottom of the plugins page to something lower such as 400x300.
+          <br><br>
+          <h4>Glitchy Graphics</h4>
+          If using a plugin other than GlideN64 this is normal and a flaw of the emulator plugins not the ModLoader so we cannot fix this. You can try another graphics plugin or if you are brave tweak some settings in the graphics plugin.
+          <br><br>
+          <h4>How do i host a server?</h4>
+          Most of the time this is asked for the purpose of playing with the friends. In the case of OOTO, that does not require you to host a server to play a private game with your friends. No server hosting or hamachi needed.
+          Simply do the following:
+          <ul>
+            <li>Make sure the IP and Port are the ones provided in #faq</li>
+            <li>Make sure to put any lobby name and password that you want (This creates a session for your group to play in)</li>
+            <li>Give that SAME lobby name and password (Case sensitive in both text boxes) to your friends.</li>
+            <li>Play the game.</li>
+          </ul>
         </div>
-        <div class="col-lg-4 mr-auto">
-          <!-- <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p> -->
+        <div class="col-lg-3 ml-auto">
+          <h4>Long Delay on Start Menu</h4><br>
+          Pressing start to access menu takes a long time. Fix -- In bizhawk, click "Tools -> Cheat Code Converter" and enter in "Pause Menu Fix" for description and "801DA5CB 0002" in the code box then hit convert.
+          <br><br>
+          <h4>Hosting Server</h4>
+          For confusion sake, hosting a server is made not as easily accessible. If you wish to play in a private session with your friends, Simply set a custom Lobby Name and Password and start the game. Give the same lobby name and password to your friends for them to join. If you are familiar with port forwarding and server setup and wish to host for a lan or more performance, open the OotModLoader-Config.json file in the Oot Online folder and set "isMaster" to true. This should only be done on the person hosting a server, not on the other players wishing to connect, they only need the IP and port you hosted on.
+          <br><br>
+          <h4>I cant see my friends in game</h4>
+          This can be caused for a few reasons, here is a check list to help identify and/or fix the problem:
+          <ul>
+            <li>Allow the game through firewall and antivirus</li>
+            <li>Make sure you put in exactly the same lobby name and password</li>
+            <li>Make sure the IP and port are set to the master server, you can press <b>reset</b> to get the original default one.</li>
+            <li>Open OotModLoader-config.json with notepad and make sure "isMaster" is set to false</li>
+            <li>If the steps above dont work, completely disable antivirus. (This is mainly targetted at AVG and Avast as known culprits -- Get Bitdefender, its a better antivirus)</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 ml-auto">
+          <h4>Black Screen Glitch</h4>
+          Can hear the game but screen is black. This is because the current graphic  plugin does not work on you pc for what ever reason, to fix this click the N64 tab and mess around with the other plug ins to find one that works. :Note other plugins might have small graphical glitches but it's better than a black screen.
+          <br><br>
+          <h4>Some items (like keys) aren't synced!</h4>
+          This is normal. Keys, Rupees, generally anything with a counter indicating an 'amount' do not sync. All other items and story events however should properly sync. Because of this, do not let someone leave with a key, and it would be smart to save after collecting every key, one crash can make a dungeon not completable without cheats!
+          <br><br>
+          <h4>My game is pixelated!</h4>
+          This fix will reduce FPS, but when the game is running, open the N64 tab at the top, then Plugins. The bottom dropdown menu for Internal Resolution -> Set that something higher.
+          <br><br>
+          <h4>The other players have bugged animations</h4>
+           Disable the lua script by double clicking it, exit the room, restart the lua script, then come back in.
+          <br><br>
+          <h4>Getting killed by Phantom Ganon causes the Elevator to get stuck</h4>
+          Use the following gameshark code to teleport back to Phantom Ganon's room until this issue can be resolved in a future version.<br>
+          816000AC 000C<br>
+          816000AE 0000<br>
+          806000AB 0005<br>
         </div>
       </div>
 
@@ -146,11 +196,31 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="bg-primary text-white contact">
+  <section class="bg-primary text-white" id="team">
     <div class="container">
-      <h2 class="text-center text-uppercase text-secondary mb-0">Team</h2>
+      <h2 class="text-center text-uppercase text-white mb-0">Team</h2>
       <hr class=" mb-5">
       <div class="row">
+        <div class="col-lg-4 ml-auto">
+          <h4>Core</h4>
+          denoflions<br>
+          Ideka<br>
+          MelonSpeedruns<br>
+          glank<br><br>
+          <h4>Testing</h4>
+          Psi-Hate
+          <!-- <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p> -->
+        </div>
+        <div class="col-lg-4 mr-auto">
+          <h4>Web & Launcher</h4>
+          TheCherry<br><br>
+          <h4>Art</h4>
+          Psi-Hate<br>
+          Nikki<br><br>
+          <h4>Launcher theme</h4>
+          ZMarotrix
+          <!-- <p class="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p> -->
+        </div>
       </div>
     </div>
   </section>
