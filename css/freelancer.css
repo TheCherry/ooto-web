@@ -39,6 +39,14 @@ hr.star-dark {
   margin-right: auto;
 }
 
+.green {
+    color: green;
+}
+
+.red {
+  color: red;
+}
+
 hr.star-light:after,
 hr.star-dark:after {
   position: relative;

@@ -1,6 +1,31 @@
 (function($) {
   "use strict"; // Start of use strict
 
+  console.log(".....")
+  $.ajax({
+    dataType: "json",
+    url: "https://api.oot-online.org/",
+    // data: data,
+    success: function(data){
+      console.log(data)
+      if(data["ca"]["online"] === true){
+        $("#ca_status").removeClass("badge-danger");
+        $("#ca_status").addClass("badge-success");
+        $("#ca_status").html('<i class="fas fa-circle green"></i> Online');
+        $("#ca_player_count").html(data["ca"]["player_count"]);
+        $("#ca_room_count").html(data["ca"]["room_count"]);
+      }
+      if(data["eu"]["online"] === true){
+        $("#eu_status").removeClass("badge-danger");
+        $("#eu_status").addClass("badge-success");
+        $("#eu_status").html('<i class="fas fa-circle green"></i> Online');
+        $("#eu_player_count").html(data["eu"]["player_count"]);
+        $("#eu_room_count").html(data["eu"]["room_count"]);
+      }
+    }
+  });
+
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
