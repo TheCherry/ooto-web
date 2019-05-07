@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Ocarina of Time Online. Play together.">
-  <meta name="author" content="Team Ooto">
+  <meta name="author" content="Team OoTO">
 
   <title>OoT - Online</title>
 
@@ -119,13 +119,13 @@
           <ul>
             <li>Step 1: Click <a href="https://github.com/hylian-modding/OotModLoader/releases">Download Now!</a> and download the newest client version.</li>
             <li>Step 2: Extract the zip into an empty folder.</li>
-            <li>Step 3: Put your 1.0 NTSC (US/JP) OoT ROM in the "ROM" folder.</li>
-            <li>Step 4: Open "OoTModLoader-GUI.exe"</li>
+            <li>Step 3: Put your 1.0 NTSC (US/JP) OoT ROM in the "rom" folder.</li>
+            <li>Step 4: Open "OoTModLoader.exe"</li>
             <li>Step 5: If "Windows Security Alert" shows up, make sure the private network box is checked and click "allow access".</li>
             <li>Step 6: During the first-time setup, the program will install bizhawk. Wait for the button to finish installing bizhawk.</li>
             <li>Step 7: After Bizhawk is installed, close the program and reopen it.</li>
             <li>Step 8: You should see the config loaded. Change the settings accordingly to your preferences. Make sure you have the correct server and port information typed in mentioned in <a href="https://oot-online.org/#known_issues">Known Issues & FAQ</a>.</li>
-            <li>Step 9: Once you are ready to play, press "Connect to Server".</li>
+            <li>Step 9: Once you are ready to play, click "Connect to Server".</li>
             <li>Step 10: If all is setup properly, Bizhawk should load the emulator with the ROM.</li>
             <li>Step 11: Configure the emulator settings to your preferences and you should be ready to go!</li>
           </ul>
@@ -152,19 +152,19 @@
       <div class="row">
         <div class="col-lg-3 ml-auto">
           <h4>Inverted Controls</h4>
-          Your Left/Right or Up/Down is inverted. Fix -- In bizhawk, click "Config -> Controls" and go to the third tab called "Analog Controls". If the L/R is inverted, make sure sensitivity on the top is -100 (Or if its already -100, to 100) , otherwise if the U/D is inverted, same instructions just for the bottom sensitivity option.
+          Your Left/Right or Up/Down is inverted. In bizhawk, click "Config -> Controls" and go to the third tab called "Analog Controls". If the L/R is inverted, make sure sensitivity on the top is -100 (Or if its already -100, to 100) , otherwise if the U/D is inverted, same instructions just for the bottom sensitivity option.
           <br><br>
           <h4>Low FPS</h4>
-          This is normal for bad computers. The best we can suggest is using Rice video plugin (Refer to Black Screen Glitch to change) as well as keep the internal resolution listed at the bottom of the plugins page to something lower such as 400x300.
+          This is normal for bad computers. The best we can suggest is using Rice video plugin in N64 -> Plugins as well as keep the video resolution listed at the bottom of the plugins page to something lower such as 400x300.
           <br><br>
           <h4>Glitchy Graphics</h4>
-          If using a plugin other than GlideN64, this is normal and a flaw of the emulator plugins, not the ModLoader, so we cannot fix this. You can try another graphics plugin or if you are brave, tweak some settings in the graphics plugin.
+          If you are using a plugin other than GlideN64, this is normal and a flaw of the emulator plugins, not the ModLoader, so we cannot fix this. You can try another graphics plugin or if you are brave, tweak some settings in the graphics plugin.
           <br><br>
           <h4>How do I host a server?</h4>
           This is usually asked for the purpose of playing with the friends. In the case of OoT Online, you are not required to host a server to play a private game with your friends.
           Simply do the following:
           <ul>
-            <li>Make sure the IP and Port are set to 192.99.70.23 and 8082.</li>
+            <li>Make sure the Server IP and Port are set to 192.99.70.23 and 8082.</li>
             <li>Make sure to put any lobby name and password that you want. This creates a session for your group to play in.</li>
             <li>Give that SAME lobby name and password (case sensitive in both text boxes) to your friends.</li>
             <li>Play the game.</li>
@@ -172,30 +172,30 @@
         </div>
         <div class="col-lg-3 ml-auto">
           <h4>Long Delay on Start Menu</h4><br>
-          Pressing start to access menu takes a long time. Fix -- In bizhawk, click "Tools -> Cheat Code Converter" and enter in "Pause Menu Fix" for description and "801DA5CB 0002" in the code box then hit convert.
+          Pressing start to access the pause menu may take a long time. In bizhawk, click "Tools -> Cheat Code Converter" and enter in "Pause Menu Fix" for description and "801DA5CB 0002" in the code box and click convert.
           <br><br>
           <h4>Hosting a Server</h4>
-          For confusion sake, hosting a server is not made as easily accessible. If you wish to play in a private session with your friends, Simply set a custom Lobby Name and Password and start the game. Give the same lobby name and password to your friends for them to join. If you are familiar with port forwarding and server setup and wish to host for a lan or more performance, open the OotModLoader-Config.json file in the Oot Online folder and set "isMaster" to true. This should only be done on the person hosting a server, not on the other players wishing to connect, they only need the IP and port you hosted on.
+          For confusion sake, hosting a server is not made as easily accessible. If you wish to play in a private session with your friends, simply set a custom lobby name and password and start the game. Give the same lobby name and password (case sensitive) to your friends for them to join. If you are familiar with port forwarding and server setup and wish to host for a lan or more performance, open the OotModLoader-Config.json file in the Oot Online folder and set "isMaster" to true. This should only be done on the person hosting a server, not on the other players wishing to connect, they only need the Server IP and Port you are hosting on.
           <br><br>
           <h4>I can't see my friends in game</h4>
           This can be caused for a few reasons, here is a check list to help identify and/or fix the problem:
           <ul>
             <li>Allow the game through firewall and antivirus</li>
-            <li>Make sure you put in exactly the same lobby name and password</li>
-            <li>Make sure the IP and port are set to the master server, you can press <b>reset</b> to get the default one.</li>
+            <li>Make sure you put in the exact same lobby name and password (it is case sensitive)</li>
+            <li>Make sure the Server IP and Port are set to the master server, you can press <b>reset</b> to get the default one.</li>
             <li>Open OotModLoader-config.json with notepad and make sure "isMaster" is set to false</li>
-            <li>If the steps above dont work, completely disable antivirus. (This is mainly targetted at AVG and Avast as known culprits -- Get Bitdefender, it's a better antivirus)</li>
+            <li>If the steps above dont work, completely disable antivirus. (This is mainly targetted at AVG and Avast as known culprits. We reccommend Bitdefender, it's a better antivirus)</li>
           </ul>
         </div>
         <div class="col-lg-3 ml-auto">
           <h4>Black Screen Glitch</h4>
-          If you are able to hear the audio but the screen is black, this is because the current graphic plugin does not work on you pc for what ever reason. Click the N64 tab on the emulator and try using the other plugins to find one that works (rice is suggested). Note: Other plugins might have small graphical glitches, but it's better than a black screen.
+          If you are able to hear the audio but the screen is black, this is because the current graphic plugin does not work on your pc for what ever reason. Click the N64 tab on the emulator and try using the other plugins to find one that works (rice is suggested). Note: Other plugins might have small graphical glitches, but it's better than a black screen.
           <br><br>
           <h4>Some items (like keys) aren't synced</h4>
           This is normal. Keys, Rupees, generally anything with a counter indicating an 'amount' do not sync. All other items and flags however should properly sync. If someone happens to take a key and leave the game, the codes to get them can be found <a href="https://www.zeldaxtreme.com/ocarina-of-time/gameshark-codes-version-1.0/">here</a>
           <br><br>
           <h4>My game is pixelated</h4>
-          This fix might reduce FPS, but when the game is running, open the N64 tab at the top, then Plugins. The bottom dropdown menu for Video Resolution -> Set that to something higher.
+          This fix might reduce FPS, but when the game is running, open the N64 tab at the top, then Plugins. Then click the bottom dropdown menu for Video Resolution and set your resolution to something higher.
           <br><br>
           <h4>The other players have bugged animations</h4>
            Disable the lua script by double clicking it, exit the room, restart the lua script, then enter the room again.
